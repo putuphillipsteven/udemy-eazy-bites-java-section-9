@@ -7,24 +7,15 @@ import com.eazybytes.model.Person;
 public class Main {
 
     public static void main(String[] args) {
-        Employee employee = new Employee();
-
-        MyOuterClass.MyInnerClass myInnerClass = new MyOuterClass.MyInnerClass();
-        myInnerClass.display();
-
-        AccessModifiersDemo accessModifiersDemo = new AccessModifiersDemo();
-        System.out.println(accessModifiersDemo.defaultVariable);
-        System.out.println(accessModifiersDemo.publicVariable);
-        System.out.println(accessModifiersDemo.protectedVariable);
-
         Person person = new Person();
-        person.age = 10;
-        person.firstName = "John";
-        person.lastName = "Doe";
-        person.salary = 10000.00;
-        System.out.println(person.age);
-        System.out.println(person.firstName);
-        System.out.println(person.lastName);
-        System.out.println(person.salary);
+        person.setAge(100);
+        person.setFirstName("John");
+        person.setLastName("Doe");
+        person.setSalary(10000.00);
+
+        System.out.println("AGE: " + person.getAge());
+        System.out.println("FIRST NAME: " + person.getFirstName());
+        System.out.println("LAST NAME: " + person.getLastName());
+        System.out.println("SALARY: " + person.getSalary());
     }
 }
